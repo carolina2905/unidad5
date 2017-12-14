@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.testFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.testFormHeader}</h2>
+                <p:fieldset legend="#{str.testLegendForm}">
+                <h:form>
+                    <p:panelGrid columns="1"> 
+                         <p:selectOneMenu value="#{testBean.test.answer.idAnswer}">
+                                <f:selectItems value="#{testBean.answers}" var="d" 
+                                               itemLabel="#{d.name}" itemValue="#{d.idAnswer}"></f:selectItems>                                     
+                            </p:selectOneMenu>   
+                        
+                    <p:inputText placeholder="#{str.testSubjectPrompt}" value="#{testBean.test.subject}"></p:inputText>
+                     <p:inputText placeholder="#{str.testSemesterPrompt}" value="#{testBean.test.semester}"></p:inputText>
+                      <p:inputText placeholder="#{str.testScorePrompt}" value="#{testBean.test.score}"></p:inputText>
+                       <p:inputText placeholder="#{str.testFinalScorePrompt}" value="#{testBean.test.finalScore}"></p:inputText>
+                    </p:panelGrid>
+                    <p:commandButton value="#{str.buttonSave}" action="#{testBean.save()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonDelete}" action="#{testBean.remove()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonCancel}" action="#{testBean.cancel()}"></p:commandButton>
+                </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

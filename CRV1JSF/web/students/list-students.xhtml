@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+             <title>#{str.studentListTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h1>#{str.studentListTitle}</h1>
+                    <h:form>
+                        <p:commandButton value="#{str.buttonAdd}" action="#{studentBean.start()}"> </p:commandButton>
+                    </h:form>
+                    <p:dataTable value="#{studentBean.students}" var="e">
+                        <p:column headerText="#{str.action}">
+                            <h:form>
+                                <p:commandButton value="#{str.buttonEdit}" action="#{studentBean.edit(e)}"></p:commandButton>
+                            </h:form>
+                        </p:column>
+                        <p:column headerText="#{str.studentNameHeader}">
+                            <p:outputLabel value="#{e.name}"></p:outputLabel>
+                            </p:column>
+                        
+                        <p:column headerText="#{str.studentLastNameHeader}">
+                            <p:outputLabel value="#{e.lastName}"></p:outputLabel>
+                            </p:column>
+                            <p:column headerText="#{str.studentageHeader}">
+                            <p:outputLabel value="#{e.age}"></p:outputLabel>
+                            </p:column>
+                            <p:column headerText="#{str.studentCareerHeader}">
+                             <p:outputLabel value="#{e.career}"></p:outputLabel>
+                             </p:column>
+                            <p:column headerText="#{str.unityNameHeader}">
+                            <p:outputLabel value="#{e.unity.name}"></p:outputLabel>
+                        </p:column> 
+                        
+                    </p:dataTable>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>

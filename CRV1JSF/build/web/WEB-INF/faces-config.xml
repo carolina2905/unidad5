@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>utng.configuration.strings</base-name>
+            <var>str</var>
+        </resource-bundle>           
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            
+            <from-outcome>Users</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Roles</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Modules</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Student</from-outcome>
+            <to-view-id>/students/list-students.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Unity</from-outcome>
+            <to-view-id>/unitys/list-unitys.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Student -->
+        <navigation-case>
+            <from-outcome>Test</from-outcome>
+            <to-view-id>/tests/list-tests.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salario -->
+        <navigation-case>
+            <from-outcome>Answer</from-outcome>
+            <to-view-id>/answers/list-answers.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salario -->
+        <navigation-case>
+            <from-outcome>Employes</from-outcome>
+            <to-view-id>/employes/list-employes.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salario -->
+        <navigation-case>
+            <from-outcome>Sells</from-outcome>
+            <to-view-id>/sells/list-sells.xhtml</to-view-id>
+        </navigation-case>
+        
+          <!-- Salario -->
+        <navigation-case>
+            <from-outcome>Rooms</from-outcome>
+            <to-view-id>/rooms/list-rooms.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salario -->
+        <navigation-case>
+            <from-outcome>TypeRooms</from-outcome>
+            <to-view-id>/typeRooms/list-typeRooms.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salir -->
+        <navigation-case>
+            <from-outcome>Salir</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- MODULO USUARIOS-->
+    <navigation-rule>
+        <from-view-id>/users/form-users.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Save</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Remove</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Cancel</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+            <from-view-id>/users/list-users.xhtml</from-view-id>
+            <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/users/form-users.xhtml</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/users/form-users.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/roles/form-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/roles/list-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/employes/form-employes.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/employes/list-employes.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/employes/list-employes.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/employes/list-employes.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/employes/list-employes.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/employes/form-employes.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/employes/form-employes.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/sells/form-sells.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/sells/list-sells.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/sells/list-sells.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/sells/list-sells.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/sells/list-sells.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/sells/form-sells.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/sells/form-sells.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+        
+        
+        
+        <!-- MODULO PUESTOS-->
+        
+     
+        <navigation-rule>
+             <from-view-id>/test/form-tests.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/tests/list-tests.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/tests/list-tests.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/tests/list-tests.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/tests/list-tests.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/tests/form-tests.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                 <from-outcome>Edit</from-outcome>
+                <to-view-id>/tests/form-tests.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO DIVISION-->
+        <navigation-rule>
+             <from-view-id>/unitys/form-unitys.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/unitys/list-unitys.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/unitys/list-unitys.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/unitys/list-unitys.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/unitys/list-unitys.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/unitys/form-unitys.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/unitys/form-unitys.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO EMPLEADO-->
+         <navigation-rule>
+             <from-view-id>/students/form-students.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/students/list-students.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/students/list-students.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/students/list-students.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/students/list-students.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/students/form-students.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/students/form-students.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO SALARIO-->
+        <navigation-rule>
+             <from-view-id>/answers/form-answers.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/answers/list-answers.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/answers/list-answers.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/answers/list-answers.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/answers/list-answers.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/answers/form-answers.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/answers/form-answers.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        <!-- MODULO MODULOS-->
+         <navigation-rule>
+             <from-view-id>/modules/form-modules.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/modules/list-modules.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+         <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/typeRooms/form-typeRooms.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/typeRooms/list-typeRooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/typeRooms/list-typeRooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/typeRooms/list-typeRooms.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/typeRooms/list-typeRooms.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/typeRooms/form-typeRooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/typeRooms/form-typeRooms.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/rooms/form-rooms.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/rooms/list-rooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/rooms/list-rooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/rooms/list-rooms.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/rooms/list-rooms.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/rooms/form-rooms.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/rooms/form-rooms.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+     
+     
+       <navigation-rule>
+         <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Correcto</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incorrecto</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+</faces-config>

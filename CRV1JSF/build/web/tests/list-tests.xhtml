@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+             <title>#{str.testListTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h1>#{str.testListTitle}</h1>
+                    <h:form>
+                        <p:commandButton value="#{str.buttonAdd}" action="#{testBean.start()}"> </p:commandButton>
+                    </h:form>
+                    <p:dataTable value="#{testBean.tests}" var="p">
+                        <p:column headerText="#{str.action}">
+                            <h:form>
+                                <p:commandButton value="#{str.buttonEdit}" action="#{testBean.edit(p)}"></p:commandButton>
+                            </h:form>
+                        </p:column>
+                        <p:column headerText="#{str.testNameHeader}">
+                            <p:outputLabel value="#{p.name}"></p:outputLabel>
+                            </p:column>
+                        <p:column headerText="#{str.answerNameHeader}">
+                            <p:outputLabel value="#{p.answer.name}"></p:outputLabel>
+                        </p:column>
+                        <p:column headerText="#{str.testSemesterHeader}">
+                            <p:outputLabel value="#{p.Semester}"></p:outputLabel>
+                            </p:column>
+                            <p:column headerText="#{str.testScoreHeader}">
+                            <p:outputLabel value="#{p.score}"></p:outputLabel>
+                            </p:column>
+                            <p:column headerText="#{str.testScoreFinalHeader}">
+                             <p:outputLabel value="#{p.scoreFinal}"></p:outputLabel>
+                             </p:column>
+                             
+                        
+                    </p:dataTable>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.formHeader}</title>
+        <f:event listener="#{templateBean.checkLogin()}"
+                 type="preRenderView"></f:event>
+        </h:head>
+    <h:body>
+        <div id="pagina">
+            <div id="header">
+                <h1>#{str.systemTitle}</h1>
+            </div>
+            <div id="menu">
+                <h:form>
+                    <p:menubar>
+                        <p:menuitem value="Index" action="Index"></p:menuitem>
+                        <p:menuitem value="Users" action="#{userBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Modules" action="#{moduleBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Roles" action="#{roleBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Student" action="#{studentBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Unity" action="#{unityBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Test" action="#{testBean.toList()}"></p:menuitem>
+                        <p:menuitem value="Answer" action="#{answerBean.toList()}"></p:menuitem>
+                         <p:menuitem value="Employes" action="#{employeBean.toList()}"></p:menuitem>
+                          <p:menuitem value="Sells" action="#{sellBean.toList()}"></p:menuitem>
+                          <p:menuitem value="Rooms" action="#{roomBean.toList()}"></p:menuitem>
+                            <p:menuitem value="TypeRooms" action="#{typeRoomBean.toList()}"></p:menuitem>
+                        
+                        <f:facet name="options">
+                            <p:commandButton value="Logout"
+                                             action="#{userBean.logout()}"/>
+                        </f:facet>
+                    </p:menubar>
+                </h:form>
+            </div>
+            <div id="contenido">
+                <ui:insert name="contenido">
+                    <h2>#{str.systemWelcome}</h2>
+                </ui:insert>                
+            </div>
+            <div id="pie">
+                <p>
+                    <strong>#{str.developer}</strong>
+                    #{str.myName}
+                </p>
+            </div>
+        </div>
+    </h:body>
+</html>

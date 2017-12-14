@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.studentFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.studentFormHeader}</h2>
+                <p:fieldset legend="#{str.studentLegendForm}">
+                <h:form>
+                    <p:panelGrid columns="1"> 
+                         <p:selectOneMenu value="#{studentBean.student.unity.idUnity}">
+                                <f:selectItems value="#{studentBean.unitys}" var="e" 
+                                               itemLabel="#{s.name}" itemValue="#{e.idUnity}"></f:selectItems>                                     
+                            </p:selectOneMenu>   
+                        
+                    <p:inputText placeholder="#{str.studentNamePrompt}" value="#{studentBean.student.name}"></p:inputText>
+                     <p:inputText placeholder="#{str.studentLastNamePrompt}" value="#{studentBean.student.lastName}"></p:inputText>
+                      <p:inputText placeholder="#{str.studentAgePrompt}" value="#{studentBean.student.age}"></p:inputText>
+                       <p:inputText placeholder="#{str.studentCareerPrompt}" value="#{studentBean.student.career}"></p:inputText>
+                    </p:panelGrid>
+                    <p:commandButton value="#{str.buttonSave}" action="#{studentBean.save()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonDelete}" action="#{studentBean.remove()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonCancel}" action="#{studentBean.cancel()}"></p:commandButton>
+                </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
